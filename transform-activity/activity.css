@@ -1,3 +1,18 @@
-main {
+/* Skewed the main part. I think it's close
+enough to the finished image. */
 
+main {
+    transform: skew(-5deg, -10deg);
+}
+
+/* It looked like the main header was a little 
+centered on the page but still having starting
+point at where the main part skewed. 
+So I added this just in case. 
+I'm not sure if it's right though because
+everything gets wonky when you zoom in, but the
+main part is included in getting wonky, so
+I don't know. */
+h1 {
+    margin-left: 11em;
 }
