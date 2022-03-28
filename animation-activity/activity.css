@@ -27,17 +27,44 @@ nav {
   opacity: 1;
 }
 
+/* I needed to the to react to clicking any part of the hamburger icon.
+Then there needs to be an animation for each of the rectangle divs. */
+.hamburger:hover ~ #top {
+  animation-name: top;
+  animation-name: middle;
+  animation-name: bottom;
+  animation-duration: 4s;
+}
+
+/* I worked backwards on this one. You can see below where I used the
+transform animation to first figure out what the end result needed to be.
+Then I just had to insert the transforms into the end of the key frames
+for the top and bottom rectangles. Then since the middle one just disappears,
+I changed the color to the mediumvioletred background color.
+
+I also wasn't sure if it was necessary to have more than two of the keyframes
+for this animation. It seems to flow fine with only two.
+*/
+
 @keyframes top {
-  from {}
-  to {}
+  0% { transform:rotate(0deg) translate(0px) }
+  100% { transform:translate(0px, 33px) rotate(50deg);  }
 }
 
 @keyframes middle {
-  from {}
-  to {}
+  0% {}
+  100% { background: mediumvioletred; }
 }
 
 @keyframes bottom {
-  from {}
-  to {}
+  0% { transform:rotate(0deg) }
+  100% { transform:translate(0px, -33px) rotate(-50deg)}
 }
+
+/* #top {
+  transform: translate(0px, 33px) rotate(50deg);
+}
+
+#bottom {
+  transform: translate(0px, -33px) rotate(-50deg);
+} */
