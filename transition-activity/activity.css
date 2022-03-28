@@ -12,3 +12,35 @@ button:hover {
     color: white;
     transition: 2s;
 }
+
+/* Overflow needs to be hidden so the text coming after Title Caption is hidden. */
+.caption {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Needs to be 100% so the text doesn't go off the image. */
+  .captionImg {
+    display: block;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* I mostly made the transform duration longer here because the original example
+    looked too fast. */
+  .captionOver {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    color: white;
+    transform: translateY(100%);
+    transition: transform .50s ease-out;
+  }
+  
+  .caption:hover .captionOver {
+    transform: translateY(0);
+  }

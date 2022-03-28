@@ -36,7 +36,7 @@ Then there needs to be an animation for each of the rectangle divs. */
   animation-duration: 4s;
 }
 
-/* I worked backwards on this one. You can see below where I used the
+/* I worked backwards on this one. You can see at the bottom where I used the
 transform animation to first figure out what the end result needed to be.
 Then I just had to insert the transforms into the end of the key frames
 for the top and bottom rectangles. Then since the middle one just disappears,
