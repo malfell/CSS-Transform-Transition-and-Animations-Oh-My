@@ -1,1 +1,14 @@
 
+/* Original button color. Though some of this may not be needed
+because it was in the other CSS file. */
+button {
+    background-color: ghostwhite;
+}
+
+/* Button changes on hover to cornflower blue.
+Changed the text color too since it changed in the example. */
+button:hover {
+    background-color: cornflowerblue;
+    color: white;
+    transition: 2s;
+}
